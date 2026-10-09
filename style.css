@@ -138,6 +138,23 @@ h1 {
 .hero-card li { margin: 0.35rem 0; }
 .hero-card-foot { margin: 1rem 0 0; color: #d5dde3; font-size: 0.92rem; }
 
+.banner {
+  margin: 0;
+  max-width: 1040px;
+  padding: 0 1.25rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  max-height: 420px;
+}
+
 .section { max-width: 1040px; margin: 0 auto; padding: 2.4rem 1.25rem; }
 .section.alt {
   max-width: none;
