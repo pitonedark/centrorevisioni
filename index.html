@@ -13,6 +13,7 @@
       <span class="mark" aria-hidden="true"></span>
       Centro Revisioni Tulini
     </a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambia tema">Scuro</button>
     <button class="menu-btn" aria-label="Apri menu" aria-expanded="false">Menu</button>
     <nav class="nav" id="nav">
       <a href="#servizi">Servizi</a>
@@ -169,6 +170,26 @@
   </footer>
 
   <script>
+    const themeBtn = document.querySelector("#theme-btn");
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    const syncTheme = () => {
+      const dark = document.documentElement.getAttribute("data-theme") === "dark";
+      themeBtn.textContent = dark ? "Chiaro" : "Scuro";
+    };
+    syncTheme();
+    themeBtn.addEventListener("click", () => {
+      const dark = document.documentElement.getAttribute("data-theme") === "dark";
+      if (dark) {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+      syncTheme();
+    });
+
     const btn = document.querySelector(".menu-btn");
     const nav = document.querySelector("#nav");
     btn.addEventListener("click", () => {

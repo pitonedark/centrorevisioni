@@ -7,6 +7,19 @@
   --accent: #b45309;
   --accent-dark: #8a3e06;
   --deep: #1e3a4c;
+  --header: rgba(244, 241, 234, 0.94);
+}
+
+html[data-theme="dark"] {
+  --bg: #12171c;
+  --surface: #1b232c;
+  --ink: #e8eef4;
+  --muted: #a8b4c0;
+  --line: #2c3846;
+  --accent: #e08a3c;
+  --accent-dark: #f0b27a;
+  --deep: #d7e3ee;
+  --header: rgba(18, 23, 28, 0.94);
 }
 
 * { box-sizing: border-box; }
@@ -31,7 +44,7 @@ a { color: var(--accent-dark); }
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem 1.25rem;
-  background: rgba(244, 241, 234, 0.94);
+  background: var(--header);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(8px);
 }
@@ -53,6 +66,16 @@ a { color: var(--accent-dark); }
   background: var(--accent);
 }
 
+.theme-btn {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .menu-btn {
   display: none;
   background: transparent;
@@ -66,7 +89,7 @@ a { color: var(--accent-dark); }
 .nav a:hover { color: var(--ink); }
 .nav-call {
   color: #fff !important;
-  background: var(--deep);
+  background: #1e3a4c;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
 }
@@ -120,7 +143,7 @@ h1 {
 .note { color: var(--muted); font-size: 0.85rem; }
 
 .hero-card {
-  background: var(--deep);
+  background: #1e3a4c;
   color: #f7f4ee;
   border-radius: 18px;
   padding: 1.3rem 1.3rem 1.1rem;
@@ -182,7 +205,7 @@ h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
 .tool-btn {
   display: inline-block;
   margin-top: 0.7rem;
-  background: var(--deep);
+  background: #1e3a4c;
   color: #fff !important;
   text-decoration: none;
   padding: 0.55rem 0.85rem;
