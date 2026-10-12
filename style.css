@@ -29,13 +29,13 @@ html[data-theme="dark"] .theme-btn {
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.55;
+  overflow-x: hidden;
 }
 
 a { color: var(--accent-dark); }
@@ -101,9 +101,9 @@ a { color: var(--accent-dark); }
 }
 
 .hero {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 3.5rem 1.25rem 2.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 4vw 2rem;
   display: grid;
   grid-template-columns: 1.4fr 0.8fr;
   gap: 1.5rem;
@@ -151,7 +151,7 @@ h1 {
 .hero-card {
   background: #1e3a4c;
   color: #f7f4ee;
-  border-radius: 18px;
+  border-radius: 0;
   padding: 1.3rem 1.3rem 1.1rem;
 }
 
@@ -169,29 +169,26 @@ h1 {
 
 .banner {
   margin: 0;
-  max-width: 1040px;
-  padding: 0 1.25rem 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding: 0;
 }
 
 .banner img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 18px;
+  height: min(70vh, 640px);
   object-fit: cover;
-  max-height: 420px;
+  border-radius: 0;
 }
 
-.section { max-width: 1040px; margin: 0 auto; padding: 2.4rem 1.25rem; }
+.section { width: 100%; margin: 0; padding: 2.4rem 4vw; }
 .section.alt {
   max-width: none;
   background: var(--surface);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.section.alt > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+.section.alt > * { max-width: none; margin-left: 0; margin-right: 0; }
 
 h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
 .intro { margin-top: 0; color: var(--muted); }
@@ -202,7 +199,7 @@ h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 1.1rem 1.15rem;
 }
 .card h3 { margin: 0 0 0.35rem; }
@@ -243,7 +240,7 @@ h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
 .map-note {
   min-height: 180px;
   border: 1px dashed #cfc4b4;
-  border-radius: 16px;
+  border-radius: 0;
   padding: 1rem 1.1rem;
   color: var(--muted);
   background: var(--surface);
@@ -257,7 +254,13 @@ footer {
 }
 
 @media (max-width: 800px) {
-  .hero, .cards, .cards.two, .where { grid-template-columns: 1fr; }
+  .site-header { padding: 0.7rem 3vw; gap: 0.5rem; }
+  .logo { font-size: 0.92rem; }
+  .theme-btn, .menu-btn { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
+  .hero { grid-template-columns: 1fr; padding: 1.6rem 4vw 1.2rem; }
+  .banner img { height: 52vw; min-height: 180px; }
+  .section { padding: 1.6rem 4vw; }
+  .cards, .cards.two, .where { grid-template-columns: 1fr; }
   .menu-btn { display: block; }
   .nav {
     display: none;
@@ -272,6 +275,6 @@ footer {
     border-bottom: 1px solid var(--line);
   }
   .nav.open { display: flex; }
-  .nav a { padding: 0.85rem 1.25rem; border-top: 1px solid var(--line); }
+  .nav a { padding: 0.85rem 4vw; border-top: 1px solid var(--line); }
   .nav-call { border-radius: 0; }
 }
