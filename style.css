@@ -179,6 +179,28 @@ h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
 .card h3 { margin: 0 0 0.35rem; }
 .card p { margin: 0; color: var(--muted); }
 
+.tool-btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  background: var(--deep);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.tool-btn:hover { background: #152b39; }
+
+.tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tool-row .tool-btn { margin-top: 0.7rem; }
+
 .checks, .steps { margin: 0.4rem 0 0; padding-left: 1.15rem; }
 .checks li, .steps li { margin: 0.45rem 0; }
 
