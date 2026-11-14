@@ -247,6 +247,38 @@ h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
 }
 .checks li, .steps li { margin: 0.45rem 0; }
 
+.plate-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 1.4rem;
+}
+.plate-compare figure {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.plate-compare figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.plate-compare img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.plate-compare figcaption {
+  text-align: center;
+  padding: 0.55rem 0.4rem 0.65rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink);
+  background: var(--surface);
+}
+
 .source { color: var(--muted); font-size: 0.88rem; }
 
 .where {
@@ -277,7 +309,7 @@ footer {
   .hero { grid-template-columns: 1fr; padding: 1.6rem 4vw 1.2rem; }
   .banner img { height: 52vw; min-height: 180px; }
   .section { padding: 1.6rem 4vw; }
-  .photo-grid, .cards, .cards.two, .where { grid-template-columns: 1fr; }
+  .photo-grid, .cards, .cards.two, .where, .plate-compare { grid-template-columns: 1fr; }
   .menu-btn { display: block; }
   .nav {
     display: none;
