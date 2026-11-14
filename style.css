@@ -279,6 +279,23 @@ h2 { margin: 0 0 0.8rem; font-size: 1.7rem; letter-spacing: -0.02em; }
   background: var(--surface);
 }
 
+.tip-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid #1e3a4c;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0 1.4rem;
+  border-radius: 0 8px 8px 0;
+}
+.tip-box h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--deep);
+}
+html[data-theme="dark"] .tip-box {
+  border-left-color: #e08a3c;
+}
+
 .source { color: var(--muted); font-size: 0.88rem; }
 
 .where {
